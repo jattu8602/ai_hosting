@@ -95,7 +95,7 @@ class Phi2Model:
                 full_prompt = f"{prompt}"
             else:
                 full_prompt = prompt
-            
+
             # Add minimal context hint only if we have learned knowledge
             if context:
                 # Very subtle context inclusion
@@ -157,7 +157,7 @@ class Phi2Model:
                         cleaned = parts[-1].strip()  # Take last part
                     else:
                         cleaned = cleaned.replace(label, "").strip()
-            
+
             # Remove Human: and Assistant: if they appear (from few-shot examples)
             if cleaned.startswith("Assistant:"):
                 cleaned = cleaned[10:].strip()
